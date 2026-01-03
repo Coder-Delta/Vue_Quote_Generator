@@ -8,7 +8,7 @@ const href = ref("https://github.com/Coder-Delta");
 <template>
   <footer>
     Created by
-    <a v-bind:href="href" target="_blank">
+    <a :href target="_blank">
         <!-- target="_blank" opens the link in a new tab -->
       <span>Coder-Delta</span>
     </a>
