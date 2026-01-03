@@ -50,11 +50,16 @@ main p::after {
 
 }
 
+a {
+    text-decoration: none;
+}
+
 span {
     align-self: end;
     color: #406473;
 
 }
+
 
 span::before {
     content: "- "

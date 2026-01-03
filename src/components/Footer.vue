@@ -28,6 +28,11 @@ footer {
   padding-bottom: 20px;
 }
 
+a {
+    text-decoration: none;
+    color: #a7a7a7;
+}
+
 span {
   font-family: cursive;
 }
