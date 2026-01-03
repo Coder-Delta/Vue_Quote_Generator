@@ -1,10 +1,10 @@
 <script setup>
-    import { ref } from "vue";
-    import Quote from "inspirational-quotes";
-    const quote = Quote.getQuote();
-    const quoteText = ref(quote.text);
-    const quoteAuthor = ref(quote.author);
-    const href = ref("https://www.google.com/search?q=" + quoteAuthor.value.replace(" ", "+"));
+import { ref } from "vue";
+import Quote from "inspirational-quotes";
+const quote = Quote.getQuote();
+const quoteText = ref(quote.text);
+const quoteAuthor = ref(quote.author);
+const href = ref("https://www.google.com/search?q=" + quoteAuthor.value.replace(" ", "+"));
 
 </script>
 
@@ -14,7 +14,10 @@
             <p>{{ quoteText }}</p>
             <a v-bind:href="href" target="_blank"><span>{{ quoteAuthor }}</span></a>
         </section>
-        <button>Another! </button>
+        <div>
+            <button>Another! </button>
+            <button>Share</button>
+        </div>
     </main>
 </template>
 
@@ -66,6 +69,11 @@ span::before {
 
 }
 
+div {
+    display: flex;
+    gap: 45px;
+}
+
 button {
     background: #406473;
     color: white;
@@ -77,6 +85,7 @@ button {
     margin-top: 20px;
     cursor: pointer;
     transition: transform 0.2s;
+    
 }
 
 button:hover {
