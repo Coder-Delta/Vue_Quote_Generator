@@ -1,12 +1,20 @@
 <script setup>
+    import { ref } from "vue";
+    import Quote from "inspirational-quotes";
+    const quote = Quote.getQuote();
+    const quoteText = ref(quote.text);
+    const quoteAuthor = ref(quote.author);
+    console.log(quote);
+    console.log(quote.text);
+    console.log(quote.author);
 
 </script>
 
 <template>
     <main>
         <section>
-            <p>First, solve the problem. Then, write the code. </p>
-            <span>John Johnson</span>
+            <p>{{ quoteText }}</p>
+            <span>{{ quoteAuthor }}</span>
         </section>
         <button>Another! </button>
     </main>
