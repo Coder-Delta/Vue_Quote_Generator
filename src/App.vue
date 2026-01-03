@@ -13,3 +13,11 @@
 <style scoped>
 
 </style>
+
+
+<!-- 
+const isOnline = ref(true)
+
+const age = ref(35)
+
+const ratings = ref([4.5, 5, 4.2, 3]) -->

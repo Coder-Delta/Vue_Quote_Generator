@@ -4,9 +4,7 @@
     const quote = Quote.getQuote();
     const quoteText = ref(quote.text);
     const quoteAuthor = ref(quote.author);
-    console.log(quote);
-    console.log(quote.text);
-    console.log(quote.author);
+    const href = ref("https://www.google.com/search?q=" + quoteAuthor.value.replace(" ", "+"));
 
 </script>
 
@@ -14,7 +12,7 @@
     <main>
         <section>
             <p>{{ quoteText }}</p>
-            <span>{{ quoteAuthor }}</span>
+            <a v-bind:href="href" target="_blank"><span>{{ quoteAuthor }}</span></a>
         </section>
         <button>Another! </button>
     </main>
